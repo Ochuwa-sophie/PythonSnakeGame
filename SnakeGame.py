@@ -70,3 +70,13 @@ def update_snake():
             new_head[1] = 0
         elif new_head[1] < 0:
             new_head[1] = HEIGHT - BLOCK_SIZE
+    
+    if new_head == food_pos:
+        food_pos = generate_food() #generate new food
+        score += 1 #increment score when food is eaten
+    else:
+        snake_pos.pop() #remove the last element from the snake
+
+
+    snake_pos.insert(0, new_head) #add the new head to the snake
+    
