@@ -94,3 +94,12 @@ def update_snake():
                 snake_pos[0][1] > HEIGHT - BLOCK_SIZE or \
                 snake_pos[0][1] < 0
         
+    #display game over screen
+    def game_over_screen():
+        global score
+        win.fill((0, 0, 0))
+        game_over_font = pygame.font.SysFont("consolas", 50)
+        game_over_text = game_over_font.render(f"Game Over! Score: {score}", True, WHITE)
+        win.blit(game_over_text, (WIDTH // 2 - game_over_text.get_width() // 2, HEIGHT // 2 - game_over_text.get_height() // 2))
+        pygame.display.update()
+        
