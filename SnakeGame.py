@@ -3,7 +3,7 @@ import pygame
 import random
 
 # setting up some initial parameters
-WIDTH, HEIGHT = 600, 600
+WIDTH, HEIGHT = 500, 600
 BLOCK_SIZE = 20
 
 #colour definition
